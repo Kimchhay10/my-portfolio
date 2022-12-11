@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* poppins-regular - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/poppins/poppins-v20-latin-regular.eot');
+  /* IE9 Compat Modes */
+  src: local(''), url('/fonts/poppins/poppins-v20-latin-regular.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ url('/fonts/poppins/poppins-v20-latin-regular.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('/fonts/poppins/poppins-v20-latin-regular.woff') format('woff'),
+    /* Modern Browsers */ url('/fonts/poppins/poppins-v20-latin-regular.ttf') format('truetype'),
+    /* Safari, Android, iOS */ url('/fonts/poppins/poppins-v20-latin-regular.svg#Poppins') format('svg');
+  /* Legacy iOS */
+}
+
+/* poppins-500 - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/poppins/poppins-v20-latin-500.eot');
+  /* IE9 Compat Modes */
+  src: local(''), url('/fonts/poppins/poppins-v20-latin-500.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ url('/fonts/poppins/poppins-v20-latin-500.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('/fonts/poppins/poppins-v20-latin-500.woff') format('woff'),
+    /* Modern Browsers */ url('/fonts/poppins/poppins-v20-latin-500.ttf') format('truetype'),
+    /* Safari, Android, iOS */ url('/fonts/poppins/poppins-v20-latin-500.svg#Poppins') format('svg');
+  /* Legacy iOS */
+}
+
+/* poppins-600 - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/poppins/poppins-v20-latin-600.eot');
+  /* IE9 Compat Modes */
+  src: local(''), url('/fonts/poppins/poppins-v20-latin-600.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ url('/fonts/poppins/poppins-v20-latin-600.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('/fonts/poppins/poppins-v20-latin-600.woff') format('woff'),
+    /* Modern Browsers */ url('/fonts/poppins/poppins-v20-latin-600.ttf') format('truetype'),
+    /* Safari, Android, iOS */ url('/fonts/poppins/poppins-v20-latin-600.svg#Poppins') format('svg');
+  /* Legacy iOS */
+}
+
+/* poppins-700 - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/poppins/poppins-v20-latin-700.eot');
+  /* IE9 Compat Modes */
+  src: local(''), url('/fonts/poppins/poppins-v20-latin-700.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ url('/fonts/poppins/poppins-v20-latin-700.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('/fonts/poppins/poppins-v20-latin-700.woff') format('woff'),
+    /* Modern Browsers */ url('/fonts/poppins/poppins-v20-latin-700.ttf') format('truetype'),
+    /* Safari, Android, iOS */ url('/fonts/poppins/poppins-v20-latin-700.svg#Poppins') format('svg');
+  /* Legacy iOS */
+}
+
+/* kantumruy-pro-regular - latin_khmer */
+@font-face {
+  font-family: 'Kantumruy Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/kantumruy-pro/kantumruy-pro-v3-latin_khmer-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('/fonts/kantumruy-pro/kantumruy-pro-v3-latin_khmer-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/kantumruy-pro/kantumruy-pro-v3-latin_khmer-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/kantumruy-pro/kantumruy-pro-v3-latin_khmer-regular.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/kantumruy-pro/kantumruy-pro-v3-latin_khmer-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/kantumruy-pro/kantumruy-pro-v3-latin_khmer-regular.svg#KantumruyPro') format('svg'); /* Legacy iOS */
+}
+/* kantumruy-pro-500 - latin_khmer */
+@font-face {
+  font-family: 'Kantumruy Pro';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/kantumruy-pro/kantumruy-pro-v3-latin_khmer-500.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('/fonts/kantumruy-pro/kantumruy-pro-v3-latin_khmer-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/kantumruy-pro/kantumruy-pro-v3-latin_khmer-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/kantumruy-pro/kantumruy-pro-v3-latin_khmer-500.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/kantumruy-pro/kantumruy-pro-v3-latin_khmer-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/kantumruy-pro/kantumruy-pro-v3-latin_khmer-500.svg#KantumruyPro') format('svg'); /* Legacy iOS */
+}
+/* kantumruy-pro-600 - latin_khmer */
+@font-face {
+  font-family: 'Kantumruy Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/kantumruy-pro/kantumruy-pro-v3-latin_khmer-600.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('/fonts/kantumruy-pro/kantumruy-pro-v3-latin_khmer-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/kantumruy-pro/kantumruy-pro-v3-latin_khmer-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/kantumruy-pro/kantumruy-pro-v3-latin_khmer-600.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/kantumruy-pro/kantumruy-pro-v3-latin_khmer-600.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/kantumruy-pro/kantumruy-pro-v3-latin_khmer-600.svg#KantumruyPro') format('svg'); /* Legacy iOS */
+}
+/* kantumruy-pro-700 - latin_khmer */
+@font-face {
+  font-family: 'Kantumruy Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/kantumruy-pro/kantumruy-pro-v3-latin_khmer-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('/fonts/kantumruy-pro/kantumruy-pro-v3-latin_khmer-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/kantumruy-pro/kantumruy-pro-v3-latin_khmer-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/kantumruy-pro/kantumruy-pro-v3-latin_khmer-700.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/kantumruy-pro/kantumruy-pro-v3-latin_khmer-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/kantumruy-pro/kantumruy-pro-v3-latin_khmer-700.svg#KantumruyPro') format('svg'); /* Legacy iOS */
+}
+
+@layer base {
+  html {
+    font-family: Poppins, Kantumruy Pro, system-ui, sans-serif;
+  }
+}
