@@ -4,27 +4,35 @@ import Link from "next/link";
 import { CardDescription, Layout } from "../components";
 import Icon from "../components/Icon";
 import { EPages } from "../configs/enum";
-
+import { motion } from "framer-motion";
+import Typed from "react-typed";
+import GeneralButton from "../components/GeneralButton";
 const Home: NextPage = () => {
   return (
     <>
       <Layout>
         <div className="flex flex-col w-full h-full bg-white">
-          <div className="w-full flex items-start">
-            <div className="w-full lg:w-1/2 font-bold text-[28px] sm:text-[30px] md:text-[40px] lg:text-[48px] xl:text-[54px]">
-              <div className="flex items-center space-x-8">
+          <div className="w-full flex items-start justify-between">
+            <div className="w-full lg:w-[55%] font-bold text-[28px] sm:text-[30px] md:text-[40px] lg:text-[48px] xl:text-[54px]">
+              <div className="flex items-center space-x-6">
                 <span>Hi! I am </span>
                 <div className="w-auto p-2 sm:p-4 text-[18px] sm:text-[28px] bg-primary rounded-full text-white">
                   Web Developer
                 </div>
               </div>
-              <span>Kimchhay</span>
+              <Typed
+                strings={["Kimchhay"]}
+                typeSpeed={150}
+                backSpeed={100}
+                loop
+                backDelay={10000}
+              ></Typed>
               <Spacer y={1} />
               <div className="text-[18px] font-medium">
                 Designing user interface for over 5 years <br />
                 as a web developer
               </div>
-              <Spacer />
+              <Spacer y={3} />
 
               <div className="flex items-center">
                 <Link
@@ -41,31 +49,59 @@ const Home: NextPage = () => {
                   <Icon icon="chevron-circle-right-Bold" size={20} />
                 </button>
               </div>
-              <Spacer y={3} />
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Spacer y={5} />
+              <div className=" grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <CardDescription
-                  title="+84"
-                  description="clients on works worldwide"
+                  title="+20"
+                  description="clients on works country"
                 />
                 <CardDescription title="+10" description="projects done" />
+                <CardDescription title="+5" description="enviroments" />
                 <CardDescription
-                  title="Email"
-                  description="ethkimchhay03@gmail.com"
-                />
-                <CardDescription
-                  title="Facebook"
-                  description="Kimchhay Eth"
-                  icon={<Icon icon="Facebook" size={20} color="#3b5998" />}
+                  title="Experinces"
+                  description="web development API UX/UI"
                 />
               </div>
             </div>
             <Spacer x={2} />
-            <div className="hidden lg:flex w-1/2 h-[700px] bg-[#DED1C1] rounded-[16px]">
+            <div className="hidden xl:flex w-[45%] h-[670px] bg-[#DED1C1] rounded-[16px] drop-shadow-xl">
               <img
                 src="../images/profile.png"
                 className="relative object-cover h-[670px] w-full rounded-[16px]"
               />
             </div>
+          </div>
+          <Spacer y={5} />
+          <div className="flex flex-col sm:hidden">
+            <motion.a
+              href="https://web.facebook.com/kimchhay.eth.3/"
+              whileHover={{ scale: 0.98 }}
+              transition={{ duration: 0.2 }}
+              onHoverStart={(e) => {}}
+              onHoverEnd={(e) => {}}
+            >
+              <GeneralButton title="Facebook" className="bg-[#15A7FC]"/>
+            </motion.a>
+            <Spacer />
+            <motion.a
+              href="https://www.instagram.com/thisischhay_03/"
+              whileHover={{ scale: 0.98 }}
+              transition={{ duration: 0.2 }}
+              onHoverStart={(e) => {}}
+              onHoverEnd={(e) => {}}
+            >
+              <GeneralButton title="Instagram" className="bg-[#262525]" />
+            </motion.a>
+            <Spacer />
+            <motion.a
+              href="https://www.linkedin.com/feed/"
+              whileHover={{ scale: 0.98 }}
+              transition={{ duration: 0.2 }}
+              onHoverStart={(e) => {}}
+              onHoverEnd={(e) => {}}
+            >
+              <GeneralButton title="Linkedin" className="bg-[#0A66C2]" />
+            </motion.a>
           </div>
         </div>
       </Layout>
