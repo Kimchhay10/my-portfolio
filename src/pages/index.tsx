@@ -42,7 +42,7 @@ const Home: NextPage = () => {
                 </button>
               </div>
               <Spacer y={3} />
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <CardDescription
                   title="+84"
                   description="clients on works worldwide"
