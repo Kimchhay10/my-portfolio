@@ -1,7 +1,7 @@
 import { Spacer } from "@nextui-org/react";
 import type { NextPage } from "next";
 import Link from "next/link";
-import { CardDescription, Layout } from "../components";
+import { AboutBanner, CardDescription, Layout } from "../components";
 import Icon from "../components/Icon";
 import { EPages } from "../configs/enum";
 import { motion } from "framer-motion";
@@ -13,7 +13,7 @@ const Home: NextPage = () => {
       <Layout>
         <div className="flex flex-col w-full h-full bg-white">
           <div className="w-full flex items-start justify-between">
-            <div className="w-full lg:w-[55%] font-bold text-[28px] sm:text-[30px] md:text-[40px] lg:text-[48px] xl:text-[54px]">
+            <div className="w-full flex flex-col lg:w-[55%] font-bold text-[28px] sm:text-[30px] md:text-[40px] lg:text-[48px] xl:text-[54px]">
               <div className="flex items-center space-x-6">
                 <span>Hi! I am </span>
                 <div className="w-auto p-2 sm:p-4 text-[18px] sm:text-[28px] bg-primary rounded-full text-white">
@@ -29,7 +29,7 @@ const Home: NextPage = () => {
               ></Typed>
               <Spacer y={1} />
               <div className="text-[18px] font-medium">
-                Designing user interface for over 5 years <br />
+                Build and involve websites for over 2 years <br />
                 as a web developer
               </div>
               <Spacer y={3} />
@@ -50,7 +50,7 @@ const Home: NextPage = () => {
                 </button>
               </div>
               <Spacer y={5} />
-              <div className=" grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <CardDescription
                   title="+20"
                   description="clients on works country"
@@ -61,10 +61,15 @@ const Home: NextPage = () => {
                   title="Experinces"
                   description="web development API UX/UI"
                 />
+                <CardDescription
+                  title="Email"
+                  description="ethkimchhay03@gmail.com"
+                />
+                <CardDescription title="Contact" description="097 800 7423" />
               </div>
             </div>
             <Spacer x={2} />
-            <div className="hidden xl:flex w-[45%] h-[670px] bg-[#DED1C1] rounded-[16px] drop-shadow-xl">
+            <div className="hidden xl:flex xl:w-[45%] h-[670px] bg-[#DED1C1] rounded-[16px] drop-shadow-xl">
               <img
                 src="../images/profile.png"
                 className="relative object-cover h-[670px] w-full rounded-[16px]"
@@ -80,7 +85,7 @@ const Home: NextPage = () => {
               onHoverStart={(e) => {}}
               onHoverEnd={(e) => {}}
             >
-              <GeneralButton title="Facebook" className="bg-[#15A7FC]"/>
+              <GeneralButton title="Facebook" className="bg-[#15A7FC]" />
             </motion.a>
             <Spacer />
             <motion.a
@@ -102,6 +107,7 @@ const Home: NextPage = () => {
             >
               <GeneralButton title="Linkedin" className="bg-[#0A66C2]" />
             </motion.a>
+            <Spacer y={2} />
           </div>
         </div>
       </Layout>
