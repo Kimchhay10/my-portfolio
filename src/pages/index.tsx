@@ -7,6 +7,8 @@ import { EPages } from "../configs/enum";
 import { motion } from "framer-motion";
 import Typed from "react-typed";
 import GeneralButton from "../components/GeneralButton";
+import NextLink from "next/link";
+
 const Home: NextPage = () => {
   return (
     <>
@@ -44,10 +46,12 @@ const Home: NextPage = () => {
                   <span className="relative text-white">Hire Me</span>
                 </Link>
                 <Spacer />
-                <button className="flex items-center text-[20px] space-x-2">
-                  <span>Project</span>
-                  <Icon icon="chevron-circle-right-Bold" size={20} />
-                </button>
+                <NextLink href={EPages.PROJECT}>
+                  <button className="flex items-center text-[20px] space-x-2 text-black">
+                    <span>Project</span>
+                    <Icon icon="chevron-circle-right-Bold" size={20} />
+                  </button>
+                </NextLink>
               </div>
               <Spacer y={5} />
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

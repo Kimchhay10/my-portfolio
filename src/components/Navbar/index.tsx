@@ -34,6 +34,18 @@ const Navbar: React.FC<NavbarProps> = () => {
             title="Home"
           />
           <NavbarItem
+            isActive={router.asPath === EPages.PROJECT}
+            href={EPages.PROJECT}
+            title="Projects"
+            icon={
+              <Icon
+                icon="chevron-circle-down-Bold"
+                size={15}
+                color="#FF481B"
+              ></Icon>
+            }
+          />
+          <NavbarItem
             isActive={router.asPath === EPages.WORK}
             href={EPages.WORK}
             title="Work"
