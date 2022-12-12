@@ -1,6 +1,7 @@
 import { Spacer, Text } from "@nextui-org/react";
 import React from "react";
 import { AboutBanner, Layout } from "../components";
+import Container from "../components/Container";
 
 const About = () => {
   const educationItems = [
@@ -14,18 +15,20 @@ const About = () => {
   ];
   return (
     <Layout>
-      <div className="w-full flex flex-col">
-        <Text h1 className="text-center text-[40px] font-medium">
-          More detail about me
-        </Text>
-        <span className="text-gray-700 text-center">
-          Get more my information within education and working enviroments
-        </span>
-        <Spacer y={3} />
-        <AboutBanner items={educationItems} headTitle="Education" />
-        <Spacer y={3}/>
-        <AboutBanner items={workItems} headTitle="Work Enviroments" />
-      </div>
+      <Container>
+        <div className="w-full flex flex-col">
+          <Text h1 className="text-center text-[40px] font-medium">
+            More detail about me
+          </Text>
+          <span className="text-gray-700 text-center">
+            Get more my information within education and working enviroments
+          </span>
+          <Spacer y={3} />
+          <AboutBanner items={educationItems} headTitle="Education" />
+          <Spacer y={3} />
+          <AboutBanner items={workItems} headTitle="Work Enviroments" />
+        </div>
+      </Container>
     </Layout>
   );
 };
