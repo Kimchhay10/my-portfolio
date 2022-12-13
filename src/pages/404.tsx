@@ -1,4 +1,6 @@
 import { Text } from '@nextui-org/react';
+import { GetStaticProps, GetStaticPropsContext } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
 import React from 'react'
 import { EPages } from '../configs/enum';
@@ -20,3 +22,12 @@ const NotFound = () => {
 }
 
 export default NotFound
+export const getStaticProps: GetStaticProps = async ({
+  locale,
+}: GetStaticPropsContext) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? "en", ["common"])),
+    },
+  };
+};

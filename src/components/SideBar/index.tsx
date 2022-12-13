@@ -6,12 +6,13 @@ import Icon from "../Icon";
 import useSideBar from "../../hooks/system/useSideBar";
 import { EPages } from "../../configs/enum";
 import {motion} from 'framer-motion'
+import { useTranslation } from "react-i18next";
 interface SideBarProps {}
 
 const SideBar: React.FC<SideBarProps> = () => {
   const router = useRouter();
   const { isClickBar, setClickBar } = useSideBar();
-
+  const {t} = useTranslation('common')
   return (
     <div className="flex lg:hidden w-full h-full fixed z-40 left-0 right-0 bg-white ">
       <div className="py-2" onClick={() => setClickBar(!isClickBar)}>
@@ -23,27 +24,27 @@ const SideBar: React.FC<SideBarProps> = () => {
       </div>
       <div className="flex flex-col items-center mx-auto space-y-6 mt-[24px] text-black">
         <NavItem
-          title="Home"
+          title={t("bar.home")}
           href={EPages.HOME}
           isActive={router.asPath === EPages.HOME}
         />
         <NavItem
-          title="Projects"
+          title={t("bar.projects")}
           href={EPages.PROJECT}
           isActive={router.asPath === EPages.PROJECT}
         />
         <NavItem
-          title="Work"
+          title={t("bar.work")}
           href={EPages.WORK}
           isActive={router.asPath === EPages.WORK}
         />
         <NavItem
-          title="Services"
+          title={t("bar.services")}
           href={EPages.SERVICES}
           isActive={router.asPath === EPages.SERVICES}
         />
         <NavItem
-          title="About"
+          title={t("bar.about")}
           href={EPages.ABOUT}
           isActive={router.asPath === EPages.ABOUT}
         />

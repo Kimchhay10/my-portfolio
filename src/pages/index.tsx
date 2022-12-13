@@ -11,7 +11,6 @@ import NextLink from "next/link";
 import Container from "../components/Container";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "react-i18next";
-import { SWRConfig } from 'swr'
 
 const HomePage: NextPage = () => {
   const { t } = useTranslation("common");

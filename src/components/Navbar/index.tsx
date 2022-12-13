@@ -8,6 +8,9 @@ import { EPages } from "../../configs/enum";
 import Icon from "../Icon";
 import useSideBar from "../../hooks/system/useSideBar";
 import ChangeLanguageDropDown from "../ChangeLanguageDropDown";
+import { GetStaticProps, GetStaticPropsContext } from "next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "react-i18next";
 interface NavbarProps {}
 
 const Navbar: React.FC<NavbarProps> = () => {
@@ -16,6 +19,7 @@ const Navbar: React.FC<NavbarProps> = () => {
   const handleClickMenu = useCallback(() => {
     setClickBar(!isClickBar)
   }, [])
+  const {t} = useTranslation("common")
   return (
     <div className="relative container w-full h-[80px] flex">
       <div className="w-full flex items-center h-auto justify-between">
@@ -32,12 +36,12 @@ const Navbar: React.FC<NavbarProps> = () => {
           <NavbarItem
             isActive={router.asPath === EPages.HOME}
             href={EPages.HOME}
-            title="Home"
+            title={t("bar.home")}
           />
           <NavbarItem
             isActive={router.asPath === EPages.PROJECT}
             href={EPages.PROJECT}
-            title="Projects"
+            title={t("bar.projects")}
             icon={
               <Icon
                 icon="chevron-circle-down-Bold"
@@ -49,7 +53,7 @@ const Navbar: React.FC<NavbarProps> = () => {
           <NavbarItem
             isActive={router.asPath === EPages.WORK}
             href={EPages.WORK}
-            title="Work"
+            title={t("bar.work")}
             icon={
               <Icon
                 icon="chevron-circle-down-Bold"
@@ -61,12 +65,12 @@ const Navbar: React.FC<NavbarProps> = () => {
           <NavbarItem
             isActive={router.asPath === EPages.SERVICES}
             href={EPages.SERVICES}
-            title="Services"
+            title={t("bar.services")}
           />
           <NavbarItem
             isActive={router.asPath === EPages.ABOUT}
             href={EPages.ABOUT}
-            title="About"
+            title={t("bar.about")}
           />
         </div>
         <div className="hidden lg:flex items-center space-x-[16px] px-4 text-[14px]">
@@ -138,3 +142,4 @@ const NavbarItem = ({ title, isActive, icon, ...rest }: ItemProps) => {
 };
 
 export default Navbar;
+

@@ -11,6 +11,13 @@
     "no_result": "Sorry, No result found :(",
     "back_to_home": "Back to home"
   },
+  "bar": {
+    "home": "Home",
+    "projects": "Projects",
+    "work": "Work",
+    "services": "Services",
+    "about": "About"
+  },
   "home_page": {
     "greeting": "Hi I am",
     "kimchhay": "Kimchhay",
