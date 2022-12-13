@@ -1,7 +1,7 @@
 import { Spacer } from "@nextui-org/react";
-import type { NextPage } from "next";
+import type { GetStaticProps, GetStaticPropsContext, NextPage } from "next";
 import Link from "next/link";
-import { AboutBanner, CardDescription, Layout } from "../components";
+import { CardDescription, Layout } from "../components";
 import Icon from "../components/Icon";
 import { EPages } from "../configs/enum";
 import { motion } from "framer-motion";
@@ -9,8 +9,12 @@ import Typed from "react-typed";
 import GeneralButton from "../components/GeneralButton";
 import NextLink from "next/link";
 import Container from "../components/Container";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "react-i18next";
+import { SWRConfig } from 'swr'
 
-const Home: NextPage = () => {
+const HomePage: NextPage = () => {
+  const { t } = useTranslation("common");
   return (
     <>
       <Layout>
@@ -18,23 +22,25 @@ const Home: NextPage = () => {
           <div className="flex flex-col w-full h-full bg-white">
             <div className="w-full flex items-start justify-between">
               <div className="w-full flex flex-col lg:w-[55%] font-bold text-[28px] sm:text-[30px] md:text-[40px] lg:text-[48px] xl:text-[54px]">
-                <div className="flex items-center space-x-6">
-                  <span>Hi! I am </span>
+                <div className="w-full flex items-center space-x-6">
+                  <span className="text-[24px]">{t('home_page.greeting')}</span>
                   <div className="w-auto p-2 sm:p-4 text-[18px] sm:text-[28px] bg-primary rounded-full text-white">
                     Web Developer
                   </div>
                 </div>
-                <Typed
-                  strings={["Kimchhay"]}
-                  typeSpeed={150}
-                  backSpeed={100}
-                  loop
-                  backDelay={10000}
-                ></Typed>
+                <div className="w-full">
+                  <Typed
+                    strings={[t('home_page.kimchhay')]}
+                    typeSpeed={150}
+                    backSpeed={100}
+                    loop
+                    backDelay={5000}
+                  />
+                </div>
+
                 <Spacer y={1} />
                 <div className="text-[18px] font-medium">
-                  Build and involve websites for over 2 years <br />
-                  as a web developer
+                  {t('home_page.description')}
                 </div>
                 <Spacer y={3} />
 
@@ -121,5 +127,15 @@ const Home: NextPage = () => {
     </>
   );
 };
+export default HomePage
 
-export default Home;
+export const getStaticProps: GetStaticProps = async ({
+  locale,
+}: GetStaticPropsContext) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? "en", ["common"])),
+    },
+  };
+};
+

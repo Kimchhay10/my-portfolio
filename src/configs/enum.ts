@@ -6,3 +6,7 @@ export enum EPages {
     SERVICES = "/services",
     CONTACT = "/contact",
 }
+export enum ELanguages {
+  EN = "en",
+  KM = "km",
+}

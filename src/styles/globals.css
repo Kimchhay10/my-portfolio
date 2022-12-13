@@ -116,7 +116,7 @@
 }
 
 @layer base {
-  html {
+  main {
     font-family: Poppins, Kantumruy Pro, system-ui, sans-serif;
   }
 }

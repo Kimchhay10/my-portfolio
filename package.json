@@ -8,13 +8,20 @@
     "gen:state": "hygen state new --name"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.5",
     "@nextui-org/react": "^1.0.0-beta.10",
+    "@types/js-cookie": "^3.0.2",
     "framer-motion": "^7.6.19",
+    "i18next": "^22.4.3",
+    "js-cookie": "^3.0.1",
     "next": "latest",
+    "next-i18next": "^13.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-i18next": "^12.1.1",
     "react-icomoon": "^2.5.4",
-    "react-typed": "^1.2.0"
+    "react-typed": "^1.2.0",
+    "swr": "^2.0.0"
   },
   "devDependencies": {
     "@types/node": "18.11.3",

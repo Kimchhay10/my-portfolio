@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import { EPages } from "../../configs/enum";
 import Icon from "../Icon";
 import useSideBar from "../../hooks/system/useSideBar";
+import ChangeLanguageDropDown from "../ChangeLanguageDropDown";
 interface NavbarProps {}
 
 const Navbar: React.FC<NavbarProps> = () => {
@@ -97,9 +98,15 @@ const Navbar: React.FC<NavbarProps> = () => {
             </Link>
           </div>
         </div>
-        <button className="flex sm:hidden font-bold" onClick={handleClickMenu}>
-          <Icon icon="hamburger-menu" size={20} />
-        </button>
+        <div className="flex items-center space-x-4">
+          <ChangeLanguageDropDown />
+          <button
+            className="flex sm:hidden font-bold"
+            onClick={handleClickMenu}
+          >
+            <Icon icon="hamburger-menu" size={20} />
+          </button>
+        </div>
       </div>
     </div>
   );

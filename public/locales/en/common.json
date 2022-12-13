@@ -1,0 +1,19 @@
+{
+  "common": {
+    "all": "All",
+    "send": "Send",
+    "see_all": "See all",
+    "load_more": "Load more",
+    "loading": "Loading",
+    "save": "Save",
+    "confirm": "Confirm",
+    "search": "Search",
+    "no_result": "Sorry, No result found :(",
+    "back_to_home": "Back to home"
+  },
+  "home_page": {
+    "greeting": "Hi I am",
+    "kimchhay": "Kimchhay",
+    "description": "Build and involve websites for over 2 years as a web developer"
+  }
+}
